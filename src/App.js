@@ -1,12 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Greeting from './components/Greeting';
-import Timer from './components/Timer';
-import Counter from './components/counter';
-import ThemeSwitcher from './components/ThemeSwitcher';
-import TextDisplayForm from './components/textInputField';
-import GetTemperature from './components/temperature';
-import TodoList from './components/ToDoList';
+
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
+import HomePage from './components/HomePage';
+
+import AboutPage from './components/AboutPage';
 
 
 
@@ -14,7 +13,12 @@ import TodoList from './components/ToDoList';
 function App() {
   return (
     <div className="App">
-    <TodoList />
+     <Router>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/about" element={<AboutPage/>}/>
+      </Routes>
+     </Router>
      </div>
   );
 }
