@@ -5,11 +5,15 @@ function Counter() {
     const updateCounter = () => {
         setCount(count+1);
     }
+    const downScaleCounter = () => {
+        setCount(count-1);
+    }
     return (
 
         <div>
             <h1>{count}</h1>
             <button onClick={updateCounter}>+1</button>
+            <button onClick={downScaleCounter}>-1</button>
         </div>
      );
 }
