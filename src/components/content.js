@@ -1,7 +1,11 @@
+import React from 'react';
+import  {useSelector} from 'react-redux';
 
-function Content({themeColor}) {
+function Content() {
+  const theme = useSelector(state => state);
+  const className = theme;
     return (
-        <div className={themeColor === "light"? "light" : "dark"}><h1>Какой то рандомный текст</h1> 
+        <div className={className}><h1>Какой то рандомный текст</h1> 
         <h1>Какой то рандомный текст</h1> 
         <h1>Какой то рандомный текст</h1> 
         <h1>Какой то рандомный текст</h1> </div>
